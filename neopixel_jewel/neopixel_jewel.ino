@@ -17,12 +17,15 @@ void setup() {
 }
 
 void loop() {
-  int ir = analogRead(A0);
-  ir = map(ir, 60,700, 0, 255);
-  ir = constrain(ir, 0, 255);
-  Serial.println(ir);
-  lightAllRainbow(ir);
+  int sensor = analogRead(A0);
+  
 }
+
+
+
+
+
+
 
 ///>>>>>>>> EXTRA FUNCTIONS THAT DO STUFF!!!
 
@@ -40,3 +43,10 @@ void lightAll(uint8_t r, uint8_t g, uint8_t b) {
   jewel.fill(jewel.Color(r, g, b));
   jewel.show();
 }
+
+
+ // int ir = analogRead(A0);
+//  ir = map(ir, 60,700, 0, 255);
+  //ir = constrain(ir, 0, 255);
+ // Serial.println(ir);
+ // lightAllRainbow(ir);
