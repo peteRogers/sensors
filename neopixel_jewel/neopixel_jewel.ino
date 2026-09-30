@@ -12,13 +12,13 @@ Adafruit_NeoPixel jewel(LED_COUNT, LED_PIN, NEO_GRBW + NEO_KHZ800);
 void setup() {
   Serial.begin(9600);
   jewel.begin();
-  jewel.setBrightness(50);  // 0-255, keep it low to save your eyes
-  jewel.show();             // start with all LEDs off
+  jewel.setBrightness(255);
 }
 
 void loop() {
-  int sensor = analogRead(A0);
-  
+  //jewel.setPixelColor(ledAddress, R, G, B, White)
+  jewel.setPixelColor(0,255,0,0,0);
+  jewel.show(); 
 }
 
 
